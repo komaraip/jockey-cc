@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #062f3d;
+    --second-bg-color: #09475c;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky{
+    background: var(--bg-color);
+}
+
+/* Animation Reload and Scroll*/
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.animate.home-img{
+    width: 50%;
+}
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate,
+.home.show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll{
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll{
+    background: var(--second-bg-color);
+}
+
+.events .events-box .animate.scroll{
+    width: 105%;
+}
+
+.about.show-animate .animate.scroll,
+.events.show-animate .animate.scroll,
+.price.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll{
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+}
+
+/* Keyframes Animation */
+@keyframes homeBgText{
+    0%,10%,100%{
+        background-position: -60rem 0;
+    }
+
+    65%,85%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCurText{
+    0%,10%,100%{
+        width: 0;
+    }
+
+    65%,78%,85%{
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,81%{
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}

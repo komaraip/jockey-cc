@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/universe.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>JCC - Contact</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <a href="home.html">
+            <img src="img/logo.jpeg" height="60px" alt="logo">
+        </a>
+        <div class="bx bx-menu" id="menu-icon">
+            <span class="animate" style="--i:2;"></span>
+        </div>
+        <nav class="navbar">
+            <a href="home.html" class="active">Home</a>
+			<a href="events.html">Events</a>
+			<a href="priceList.html">Price List</a>
+            <a href="aboutUs.html">About</a>            
+            <a href="contact.html">Contact</a>
+
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:2;"></span>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Get In <span>Touch</span></h2>
+
+        <div class="contactUs">
+            <div class="box">
+                <div class="cont form">
+                    <h3>Send a Message</h3>
+                    <form action="" method="GET" id="regisForm" onsubmit="validateForm(event)">
+                        <div class="formBox">
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Full Name</span>
+                                    <input type="text" placeholder="Your Name" name="fullname" id="fullname">
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Mobile Number</span>
+                                    <input type="text" placeholder="+62 8123456789" name="mobile" id="mobile">
+                                </div>
+                            </div>
+
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <span>Email</span>
+                                    <input type="text" placeholder="youremail@gmail.com" name="email" id="email">
+                                </div>
+
+                                <div class="inputBox">
+                                    <span>Email Subject</span>
+                                    <input type="text" placeholder="Your Subject" name="messageSub" id="messageSub">
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <span>Message</span>
+                                    <textarea placeholder="Write Your Message Here" name="message" id="message"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <div class="method">
+                                        <h3>Preferred Contact Method</h3>
+                                        <input type="radio" name="method" id="contMobile">
+                                        <span>Mobile</span>
+                                        <input type="radio" name="method" id="contEmail">
+                                        <span>Email</span>
+                                    </div>
+                                </div>
+                            </div>                            
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                     <div class="error">
+                                        <h3 id="error"></h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row100">
+                                <div class="inputBox">
+                                    <div class="btn-box btns">
+                                        <button type="submit" class="btn">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="cont info">
+                    <h3>Contact Info</h3>
+                    <div class="infoBox">
+                        <div>
+                            <span><i class='bx bxs-map' ></i></span>
+                            <p>Gatot Subroto Street<br>Jakarta, Indonesia</p>
+                        </div>
+
+                        <div>
+                            <span><i class='bx bxs-phone' ></i></span>
+                            <a href="mailto:support@jcc.com">(021) 4613000</a>
+                        </div>
+
+                        <div>
+                            <span><i class='bx bxs-envelope' ></i></span>
+                            <a href="tel:support@jcc.com">support@jcc.com</a>
+                        </div>
+
+                        <ul class="sci">
+                            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+                            <li><a href="#"><i class='bx bxl-facebook-square' ></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cont map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63462.72585669674!2d106.7516188299847!3d-6.
+                    208154023760218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6b06d8ba13f%3A0x24768e0bf573aa52!2sJl%
+                    20Jend%20Gatot%20Subroto!5e0!3m2!1sid!2sid!4v1686069850982!5m2!1sid!2sid" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" alt="maps"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="img/logo.jpeg" alt="logo2">
+            <p class="footer-links">
+                <a href="home.html" class="link-1">Home</a>            
+                <a href="events.html">Events</a>      
+                <a href="priceList.html">Price List</a>    
+                <a href="aboutUs.html">About</a>    
+                <a href="contact.html">Contact</a>
+            </p>
+            <p class="footer-company-name">Jockey's Conference Center © 2023 | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class='bx bxs-map' ></i>
+                <p><span>Gatot Subroto Street</span> Jakarta, Indonesia</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-phone' ></i>
+                <p>(021) 4613000</p>
+            </div>
+
+            <div>
+                <i class='bx bxs-envelope' ></i>
+                <p><a href="mailto:support@jcc.com">support@jcc.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About Us</span>
+                We provide comfortable and modern meeting and event spaces for your business needs.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
+                <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
